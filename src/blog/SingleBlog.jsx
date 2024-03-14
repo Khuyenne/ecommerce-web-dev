@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import blogList from "../utilis/blogdata";
 import { useParams } from "react-router-dom";
 import PageHeader from "../compoments/PageHeader";
+import Tags from "../shop/Tags"
+import PopularPost from "../shop/PopularPost"
 
 const socialList = [
   { link: "#", iconName: "icofont-facebook", className: "facebook" },
@@ -118,6 +120,7 @@ const SingleBlog = () => {
                                   <a
                                     href="https://www.youtube.com/watch?v=kOkQ4T5WO9E&list=RDSTO4-8vkG0U&index=11"
                                     className="video-button popup"
+                                    target="_blank"
                                   >
                                     <i className="icofont-ui-play"></i>
                                   </a>
@@ -190,7 +193,12 @@ const SingleBlog = () => {
                 </div>
               </article>
             </div>
-            <div className="col-lg-4 col-12">Right Side</div>
+            <div className="col-lg-4 col-12">
+              <aside>
+                <Tags/>
+                <PopularPost/>
+              </aside>
+            </div>
           </div>
         </div>
       </div>
@@ -199,3 +207,4 @@ const SingleBlog = () => {
 };
 
 export default SingleBlog;
+
